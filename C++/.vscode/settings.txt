@@ -1,0 +1,100 @@
+{
+    "files.defaultLanguage": "cpp", // ctrl+N新建文件后默认的语言
+    "editor.formatOnType": true,
+    "files.associations": {
+      "ostream": "cpp",
+      "iostream": "cpp",
+      "vector": "cpp",
+      "random": "cpp"
+   },
+    "C_Cpp.errorSquiggles": "Enabled", // 输入分号(C/C++的语句结束标识)后自动格式化当前这一行的代码
+/*
+    "editor.suggest.snippetsPreventQuickSuggestions": false, // 自动触发Intellisense
+    "editor.acceptSuggestionOnEnter": "off", // tab接受Intellisense
+     "editor.snippetSuggestions": "top", // （可选）snippets显示在补全列表顶端，默认是inline
+
+    "code-runner.runInTerminal": true, // 设置成false会在“输出”中输出，无法输入
+    "code-runner.executorMap": {
+        "c": "gcc '$fileName' -o '$fileNameWithoutExt.exe' -Wall -O2 -m64 -lm -static-libgcc -std=c11 -fexec-charset=GBK && &'./$fileNameWithoutExt.exe'",
+        "cpp": "g++ '$fileName' -o '$fileNameWithoutExt.exe' -Wall -O2 -m64 -static-libgcc -std=c++14 -fexec-charset=GBK && &'./$fileNameWithoutExt.exe'"
+        // "c": "gcc $fileName -o $fileNameWithoutExt.exe -Wall -O2 -m64 -lm -static-libgcc -std=c11 -fexec-charset=GBK && $dir$fileNameWithoutExt.exe",
+        // "cpp": "g++ $fileName -o $fileNameWithoutExt.exe -Wall -O2 -m64 -static-libgcc -std=c++14 -fexec-charset=GBK && $dir$fileNameWithoutExt.exe"
+    }, // 右键run code时运行的命令；未注释的仅适用于PowerShell（Win10默认）和pwsh，文件名中有空格也可以编译运行；注释掉的适用于cmd（win7默认）、PS和bash，但文件名中有空格时无法运行
+    "code-runner.saveFileBeforeRun": true, // run code前保存
+    "code-runner.preserveFocus": true,     // 若为false，run code后光标会聚焦到终端上。如果需要频繁输入数据可设为false
+    "code-runner.clearPreviousOutput": false, // 每次run code前清空属于code runner的终端消息，默认false
+    "code-runner.ignoreSelection": true,   // 默认为false，效果是鼠标选中一块代码后可以单独执行，但C是编译型语言，不适合这样用
+    "code-runner.fileDirectoryAsCwd": true, // 将code runner终端的工作目录切换到文件目录再运行，对依赖cwd的程序产生影响；如果为false，executorMap要加cd $dir
+
+    "C_Cpp.clang_format_sortIncludes": true, // 格式化时调整include的顺序（按字母排序）
+*/
+// "files.associations": {
+//     "*.vue": "vue",
+//     "*.wpy": "vue",
+//     "*.wxml": "html",
+//     "*.wxss": "css"
+//     },
+    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
+    "git.enableSmartCommit": true,
+    "git.autofetch": true,
+    "emmet.triggerExpansionOnTab": true,
+    "emmet.showAbbreviationSuggestions": true,
+    "emmet.showExpandedAbbreviation": "always",
+    "emmet.includeLanguages": {
+    "vue-html": "html",
+    "vue": "html",
+    "wpy": "html"
+    },
+    //主题颜色 
+    //"workbench.colorTheme": "Monokai",
+    "git.confirmSync": false,
+    "explorer.confirmDelete": false,
+    "window.zoomLevel": 0,
+    "editor.wordWrap": "on",
+    "editor.detectIndentation": false,
+    // 重新设定tabsize
+    "editor.tabSize": 3,
+    //失去焦点后自动保存
+    "files.autoSave": "onFocusChange",
+    // #值设置为true时，每次保存的时候自动格式化；
+    "editor.formatOnSave": false,
+     //每120行就显示一条线
+    "editor.rulers": [
+    ],
+    // 在使用搜索功能时，将这些文件夹/文件排除在外
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/target": true,
+        "**/logs": true,
+    }, 
+    // 这些文件将不会显示在工作空间中
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/*.js": {
+            "when": "$(basename).ts" //ts编译后生成的js文件将不会显示在工作空中
+        },
+        "**/node_modules": true
+    }, 
+    // #让vue中的js按"prettier"格式进行格式化
+    "vetur.format.defaultFormatter.html": "js-beautify-html",
+    "vetur.format.defaultFormatter.js": "prettier",
+    "vetur.format.defaultFormatterOptions": {
+        "js-beautify-html": {
+            // #vue组件中html代码格式化样式
+            "wrap_attributes": "force-aligned", //也可以设置为“auto”，效果会不一样
+            "wrap_line_length": 200,
+            "end_with_newline": false,
+            "semi": false,
+            "singleQuote": true
+        },
+        "prettier": {
+            "semi": false,
+            "singleQuote": true
+        }
+    }
+}
