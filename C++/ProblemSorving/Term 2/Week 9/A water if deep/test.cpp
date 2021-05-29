@@ -21,6 +21,7 @@ bool checkWater(){
     status[0] = 0;
     for (int i = 0; i < n; ++i)
         cin >> wt[i];
+    //sort(wt.begin(), wt.end(), [](int i, int j){return i > j;}); // add this made the program slower...
     int Gbeg = 0, Gend = 1, Gend_float = 1;
     for (int i = 0; i < n; ++i){
         Gbeg = 0;
