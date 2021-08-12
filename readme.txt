@@ -1,4 +1,2 @@
-try Git to control my coding
-Try again
-Hillo Coding
-After Merging
+Hello, today I'm going to try Git on my ubuntu 20.04
+Good Luck!
