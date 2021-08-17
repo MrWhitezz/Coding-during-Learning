@@ -1,11 +1,13 @@
-#include<bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <string>
+
 using namespace std;
+
 int main()
 {
-    const int size = 10;
-    for (int i = 0; i <= size; ++i)
-        cout << i << endl;
-    printf("Hello, World!");
+    printf("Hello World!\n");
+    cout << "你好！";
+    cout << endl;
     return 0;
 }
- 
