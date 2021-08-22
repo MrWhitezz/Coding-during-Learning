@@ -1,3 +1,5 @@
-**.vscode
-**.dSYM
+*.vscode
+*.dSYM
 *.exe
+*.e 
+*.DS_Store
