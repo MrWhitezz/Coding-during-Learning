@@ -1,34 +1,5 @@
-#include<vector>
+#include <bits/stdc++.h>
 using namespace std;
-class UnionFindSet {
-private:
-  vector<int> f;
-  int _setid(int x) {
-    if (f[x] == x) return x;
-    return f[x] = _setid(f[x]);
-  }
-
-  void _merge(int x, int y) {
-    if (setid(x) < setid(y)) f[setid(y)] = setid(x);
-    else f[setid(x)] = setid(y);
-  }
-
-public:
-  UnionFindSet(int n = 0) { 
-    f = vector<int>(n);
-    for (int i = 0; i < n; i++) f[i] = i;
-  }
-
-  int setid(int x) {
-    return _setid(x);
-  }
-
-  void merge(int x, int y) {
-    _merge(x, y);
-  }
-} ;
-
-// 带权并查集
 #define N 105
 int father[N];
 int value[N];
@@ -62,4 +33,25 @@ int Union(int x, int y, int val) {
     father[fy] = fx; // fx as root
     value[fy] = value[x] - value[y] + val; //计算两点距离
     return 0;
+}
+
+int w, n, m;
+int main() {
+    cin >> w;
+    while (w--) {
+        cin >> n >> m;
+        init(n);
+        bool real = true;
+        for (int i = 0; i < m; ++i) {
+            int s, t, v;
+            cin >> s >> t >> v;
+            s--;
+            if (Union(s, t, v))
+                real = false;
+        }
+        if (real)
+            cout << "true" << endl;
+        else
+            cout << "false" << endl;
+    }
 }
